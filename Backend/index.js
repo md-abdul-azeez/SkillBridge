@@ -14,7 +14,7 @@ app.use(cookieParser());
 const corsOptions = {
     origin : 'https//localhost:5137',
     credentials : true
-}
+};
 app.use(cors(corsOptions));
 
 const PORT = process.env.PORT || 3000;
@@ -25,4 +25,4 @@ app.use("/api/v1/company", companyRoute);
 app.listen(PORT, ()=>{
     connectDB();
     console.log(`Server is listening on ${PORT}`);
-})
+});
