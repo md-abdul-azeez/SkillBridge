@@ -11,7 +11,7 @@ dotenv.config({});
 const app = express();
 
 app.use(express.json());
-app.use(express.urlencoded({extended:true}));
+app.use(express.urlencoded({ extended:true }));
 app.use(cookieParser());
 const corsOptions = {
     origin : 'https//localhost:5137',
@@ -28,5 +28,5 @@ app.use("/api/v1/application", applicationRoute);
 
 app.listen(PORT, ()=>{
     connectDB();
-    console.log(`Server is listening on ${PORT}`);
+    console.log(`Server is listening on port ${PORT}`);
 });
