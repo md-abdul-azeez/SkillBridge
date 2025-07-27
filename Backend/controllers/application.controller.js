@@ -7,7 +7,7 @@ export const applyJob = async (req, res) => {
         const jobId = req.params.id;
         if (!jobId) {
             return res.status(400).json({
-                message : "Job id is required.",
+                message : "Job id is required",
                 success : false
             });
         };
@@ -106,14 +106,14 @@ export const updateStatus = async (req, res) => {
         const application = await Application.findOne({_id : applicationId});
         if(!application){
             return res.status(404).json({
-                message : "Application not found.",
+                message : "Application not found",
                 success : false
             });
         };
         application.status = status.toLowerCase();
         await application.save();
         return res.status(200).json({
-            message : "Status updated successfully.",
+            message : "Status updated successfully",
             success : true
         });
 
