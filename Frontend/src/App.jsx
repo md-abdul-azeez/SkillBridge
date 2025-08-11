@@ -1,4 +1,4 @@
-import './App.css'
+import './App.css';
 import Navbar from './components/shared/Navbar';
 
 function App() {
@@ -6,6 +6,6 @@ function App() {
     <>
       <Navbar/>
     </>
-  )
+  );
 }
-export default App
+export default App;
