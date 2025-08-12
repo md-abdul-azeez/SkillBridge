@@ -4,7 +4,7 @@ import Navbar from './components/shared/Navbar';
 function App() {
   return (
     <>
-      <Navbar/>
+      <Navbar name = "pankaj"/>
     </>
   );
 }
