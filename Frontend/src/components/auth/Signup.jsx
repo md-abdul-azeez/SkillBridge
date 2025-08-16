@@ -2,6 +2,8 @@ import React from "react";
 import { Label } from "../ui/label";
 import { Input } from "../ui/input";
 import { RadioGroup, RadioGroupItem } from "../ui/radio-group";
+import { Button } from "../ui/button";
+import { Link } from "react-router-dom";
 const Signup = () => {
   return (
     <div className="flex items-center justify-center max-w-7xl mx-auto">
@@ -35,6 +37,12 @@ const Signup = () => {
             </div>
           </RadioGroup>
         </div>
+        <div className="">
+          <Label className="mb-3">Profile</Label>
+          <Input type="file" accept="image/*" className="cursor-pointer"/>
+        </div>
+        <Button type="submit" className="my-3 bg-blue-600 text-white cursor-pointer">Signup</Button>
+        <span className="mx-5">Already have an account? <Link to="/login" className="text-blue-500 mx-3">Login</Link></span>
       </form>
     </div>
   );
