@@ -1,7 +1,7 @@
 import React from "react";
 import { Label } from "../ui/label";
 import { Input } from "../ui/input";
-import { RadioGroup, RadioGroupItem } from "../ui/radio-group";
+import { RadioGroup } from "../ui/radio-group";
 import { Button } from "../ui/button";
 import { Link } from "react-router-dom";
 const Signup = () => {
