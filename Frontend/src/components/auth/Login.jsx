@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { Label } from "../ui/label";
 import { Input } from "../ui/input";
 import { RadioGroup } from "../ui/radio-group";
 import { Button } from "../ui/button";
 import { Link } from "react-router-dom";
 const Login = () => {
+
+const [input, setInput] = useState({
+  fullName: "", email: "", phoneNumber: "", password: "", role: "", file: ""
+});
+
+const changeEventHandler = (e) => {
+  setInput(...input, [e.target.name: ])
+}
+
   return (
     <div className="flex items-center justify-center max-w-7xl mx-auto">
       <form className="w-1/2 border border-gray-200 rounded-md p-4 my-10">
