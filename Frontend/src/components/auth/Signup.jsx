@@ -5,6 +5,8 @@ import { Input } from "../ui/input";
 import { RadioGroup } from "../ui/radio-group";
 import { Button } from "../ui/button";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import { USER_API_END_POINT } from "@/utils/constant";
 const Signup = () => {
   const [input, setInput] = useState({
     fullName: "",
@@ -25,6 +27,17 @@ const Signup = () => {
 
   const submitHandler = async (e) => {
     e.preventDefault();
+    const formData = new FormData();
+    formData.append("fullName", input.fullName);
+    formData.append("email", input.email);
+    formData.append("phoneNumber", input.phoneNumber);
+    formData.append("password", input.password);
+    formData.append("role", input.role);
+    try {
+      const res = await axios.post(`${USER_API_END_POINT}/register`);
+    } catch (error) {
+      
+    }
   };
 
   return (
