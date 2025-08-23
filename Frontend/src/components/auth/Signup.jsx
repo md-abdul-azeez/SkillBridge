@@ -33,10 +33,11 @@ const Signup = () => {
     formData.append("phoneNumber", input.phoneNumber);
     formData.append("password", input.password);
     formData.append("role", input.role);
+
     try {
       const res = await axios.post(`${USER_API_END_POINT}/register`);
     } catch (error) {
-      
+      console.log(error);
     }
   };
 
