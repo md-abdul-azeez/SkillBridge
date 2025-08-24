@@ -33,9 +33,16 @@ const Signup = () => {
     formData.append("phoneNumber", input.phoneNumber);
     formData.append("password", input.password);
     formData.append("role", input.role);
-
+    if(input.file){
+      formData.append("file", input.file);
+    }
     try {
-      const res = await axios.post(`${USER_API_END_POINT}/register`);
+      const res = await axios.post(`${USER_API_END_POINT}/register`, formData, {
+        headers:{
+          "Content-Type":"multipart/form-data"
+        },
+        withCredentials:true
+      });
     } catch (error) {
       console.log(error);
     }
