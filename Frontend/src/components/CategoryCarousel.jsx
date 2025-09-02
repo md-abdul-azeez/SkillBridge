@@ -26,7 +26,6 @@ const CategoryCarousel = () => {
               </Button>
             </CarouselItem>;
           })}
-          <CarouselItem></CarouselItem>
         </CarouselContent>
         <CarouselPrevious />
         <CarouselNext />
